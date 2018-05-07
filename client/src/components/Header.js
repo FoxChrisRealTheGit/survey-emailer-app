@@ -6,6 +6,7 @@ import {
     Holder,
     Navbar1,
     Brand,
+    P
 } from "react-stylux";
 
 import Payments from "./Payments";
@@ -19,8 +20,9 @@ class Header extends React.Component {
                 return <Navbar1><a href="/auth/google">Login With Google</a></Navbar1>
             default:
                 return (
-                    <Navbar1 totalWidth="300px">
+                    <Navbar1 totalWidth="400px">
                          <Payments />
+                         <P>Credits: {this.props.auth.credits}</P>
                          <a href="/api/logout">Logout</a>
                     </Navbar1>
                 )
